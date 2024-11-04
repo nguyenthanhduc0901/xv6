@@ -1,0 +1,26 @@
+diff --git a/Makefile b/Makefile
+index 74e454f..769b145 100644
+--- a/Makefile
++++ b/Makefile
+@@ -194,9 +194,11 @@ UPROGS=\
+ 	$U/_grind\
+ 	$U/_wc\
+ 	$U/_zombie\
+-
+-
+-
++	$U/_sleep\
++	$U/_pingpong\
++	$U/_primes\
++	$U/_find\
++	$U/_xargs\
+ 
+ ifeq ($(LAB),syscall)
+ UPROGS += \
+@@ -374,4 +376,4 @@ submit-check:
+ zipball: clean submit-check
+ 	git archive --verbose --format zip --output lab.zip HEAD
+ 
+-.PHONY: zipball clean grade submit-check
++.PHONY: zipball clean grade submit-check
+\ No newline at end of file
